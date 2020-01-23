@@ -126,6 +126,7 @@ body,html{
         }
         .logo-img {
             vertical-align: middle;
+            height: 80%;
         }
         .arrow {
             position: absolute;
