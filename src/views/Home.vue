@@ -1,5 +1,7 @@
 <template>
   <div class="home">
+    <hr class="horizone" />
+    <hr class="vertical" />
     <table >
         <tr>
             <td class="attack-box">
@@ -59,9 +61,7 @@ body,html{
     height: 100%;
     margin: 0;
     font-weight: lighter;
-    font-family: 'Helvetica';
-    font-size:30px;
-    text-transform: uppercase;
+    background: #beb7a2;
 
 }
 .home{
@@ -72,15 +72,24 @@ body,html{
     table {
         width: 100%;
         height: 100%;
+        border: 1px solid #000;
         border-collapse: collapse;
+        font-family: 'Helvetica';
+        font-size:30px;
+        text-transform: uppercase;
+
         tr {
             height: 50%;
         }
         td {
             width: 50%;
-            border: 1px solid #000;
             padding: 20px;
-    
+            color: #000;
+            &:hover {
+                -webkit-text-stroke: 1px #000;
+                color: transparent;
+            }
+
             &.attack-box {
                 text-align:left;
                 vertical-align: top;
@@ -92,21 +101,21 @@ body,html{
                 text-align:right;
                 vertical-align: top;
                 &:hover {
-                    background: 98% 93% url(../assets/protect/3.jpg);
+                    background: 10%  20% / cover no-repeat url(../assets/protect/3.jpg);
                 }
             }
             &.escape-box {
                 text-align:left;
                 vertical-align: bottom;
                 &:hover {
-                    background: 98% 93% url(../assets/escape/3.jpg);
+                    background: 98% 0 / cover url(../assets/escape/1.jpg);
                 }
             }
             &.improvise-box {
                 text-align:right;
                 vertical-align: bottom;
                 &:hover {
-                    background: 98% 93% url(../assets/improvise/2.jpg);
+                     background: 100%  50% / cover no-repeat url(../assets/improvise/3.jpg);
                 }
             }
         }
@@ -126,7 +135,8 @@ body,html{
         }
         .logo-img {
             vertical-align: middle;
-            height: 80%;
+            width: 90%;
+            height: 90%;
         }
         .arrow {
             position: absolute;
@@ -136,10 +146,29 @@ body,html{
         }
     }
 
+    hr.horizone {
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        border: none;
+        top: calc(50% - 9px);
+        left: 0;
+        background: #000;
+    }
+    hr.vertical {
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        border: none;
+        left: 50%;
+        top: -9px;
+        background: #000;
+    }
+
 }
 
 .categories {
-    height: 100%;
+    height: calc(100% + 60px);
     background: #000;
     margin: 30px -30px 0;
 }
