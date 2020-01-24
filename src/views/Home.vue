@@ -93,29 +93,33 @@ body,html{
             &.attack-box {
                 text-align:left;
                 vertical-align: top;
+                background: -9999px -9999px / cover no-repeat url(../assets/attack/3.jpeg);
                 &:hover {
-                    background: 98% 93% url(../assets/attack/3.jpeg);
+                   background-position: 98% 93% ;
                 }
             }
             &.protect-box {
                 text-align:right;
                 vertical-align: top;
+                background: -9999px -9999px / cover no-repeat url(../assets/protect/3.jpg);
                 &:hover {
-                    background: 10%  20% / cover no-repeat url(../assets/protect/3.jpg);
+                    background-position: 10%  20%;
                 }
             }
             &.escape-box {
                 text-align:left;
                 vertical-align: bottom;
+                background: -9999px -9999px / cover no-repeat url(../assets/escape/1.jpg);
                 &:hover {
-                    background: 98% 0 / cover url(../assets/escape/1.jpg);
+                    background-position: 98% 0;
                 }
             }
             &.improvise-box {
                 text-align:right;
                 vertical-align: bottom;
+                background: -9999px -9999px / cover no-repeat url(../assets/improvise/3.jpg);
                 &:hover {
-                     background: 100%  50% / cover no-repeat url(../assets/improvise/3.jpg);
+                     background-position: 100%  50%;
                 }
             }
         }
