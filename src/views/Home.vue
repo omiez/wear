@@ -21,23 +21,66 @@
         </tr>
     </table>
     <div class="logo">
-        <span class="helper"/><img class="logo-img" src="../assets/war_logo.svg">
+        <span class="helper"/><img class="logo-img" >
         <img class="arrow" src="../assets/arrow.svg">
     </div>
     <div class="categories">
         <section>
             <div>
                 <img class="logo-img white">
-                <div class="mag-logo" />
+                <div class="mag-logo"> </div>
 <!--                 <svg style="filter: invert();" viewBox="0 0 100 100">
                     <image :href="require('@/assets/war_logo.svg')"></image>
                 </svg> -->
+                <router-link to="magazine">
                 <div class="magazine-cover">
+                    <div class="subtitle">
+                        Made in
+                    </div>
+                    <div class="title">
+                        Nazi Germany
+                    </div>
+                    <div class="catagory-name">
+                        Attack
+                    </div>
+                </div>
+               
+
+                <div class="magazine-content">
+                    <div class="magazine-column">
+                        <div class="magazine-article article-1">
+                            <div class="catagory-name">
+                                 Improvise
+                            </div>
+                        </div>
+                        <div class="magazine-article">
+                            <div class="catagory-name">
+                                 Improvise
+                            </div>
+                        </div>
+                    </div>
+                    <div class="magazine-column">
+                        <div class="magazine-article">
+                            <div class="catagory-name">
+                                 Improvise
+                            </div>
+                        </div>
+                        <div class="magazine-article">
+                            <div class="catagory-name">
+                                 Attack
+                            </div>
+                        </div>
+                         <div class="magazine-article">
+                            <div class="catagory-name">
+                                 Protect
+                            </div>
+                        </div>
+
+                    </div>
+                    
                     
                 </div>
-            </div>
-            <div>
-                
+                </router-link>
             </div>
         </section>
     </div>
@@ -59,7 +102,18 @@
 <style lang="scss">
 @font-face {
     font-family: 'Champion';
+    font-weight: bold;
+    src: url(../assets/fonts/Champion-HTF-Heavyweight.woff2) format("woff2");
+}
+@font-face {
+    font-family: 'Champion';
+    font-weight: normal;
     src: url(../assets/fonts/Champion-HTF-Middleweight.woff2) format("woff2");
+}
+@font-face {
+    font-family: 'impact';
+    font-weight: normal;
+    src: url(../assets/fonts/Impact.woff2) format("woff2");
 }
 @font-face {
     font-family: 'Champion';
@@ -75,13 +129,21 @@ body,html{
     height: 100%;
     margin: 0;
     font-weight: lighter;
-    background: #beb7a2;
+    background: #000;
 
+}
+.logo-img {
+    vertical-align: middle;
+    width: 90%;
+    height: 90%;
+    content:url("../assets/war_logo.svg");
+    width: inherit;
 }
 .home{
     padding: 30px;
     height: calc(100% - 60px);
     position: relative;
+        background: #beb7a2;
 
     table {
         width: 100%;
@@ -151,11 +213,6 @@ body,html{
             height: 100%;
             vertical-align: middle;
         }
-        .logo-img {
-            vertical-align: middle;
-            width: 90%;
-            height: 90%;
-        }
 
         .arrow {
             position: absolute;
@@ -206,14 +263,84 @@ body,html{
             width:332px;
             display:inline-block;
             float:left;
-            margin:30px -50px
+            margin:30px -50px;
+            z-index: 20;
+            position: relative;
     }
     .magazine-cover {
         clear: both;
         margin: 0 10px;
-        height: 600px;
+        height: 90vh;
+        position: relative;
         background: top / cover url(../assets/germany.jpg) no-repeat;
+        overflow: hidden;
+        & > div.subtitle {
+            position: absolute;
+            bottom: 100px;
+            left: 50px;
+            color: #ffffff;
+            font-size: 100px;
+            font-family: 'champion';
+            font-weight: bold;      
+            padding: 20px;
+            text-transform: uppercase;
+        }
+        & > div.title {
+            position: absolute;
+            bottom: 0;
+            left: 50px;
+            background:#000;
+            color: #ff0000;
+            font-size: 100px;
+            font-family: 'champion';
+            font-weight: bold;      
+            padding: 0 20px;
+        }
+        & > div.catagory-name {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background:#fff;
+            color: #000;
+            font-size: 25px;
+            font-family: 'impact';
+            padding: 10px 20px;
+            text-transform: uppercase;
+            transform-origin: center right;
+            transform:scale(1.3,1)
+        }
+    }
+    .magazine-content {
+            background: #000;
+    }
+    .magazine-column {
+        width: 50%;
+        display: inline-block;
+        vertical-align: top;
 
+    }
+    .magazine-article {
+        height: 400px;
+        margin: 20px 10px;
+        background: top / cover url(../assets/germany.jpg) no-repeat;
+        position:relative;
+        & > div.catagory-name {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background:#fff;
+            color: #000;
+            font-size: 25px;
+            font-family: 'impact';
+            padding: 10px 20px;
+            text-transform: uppercase;
+            transform-origin: center right;
+            transform:scale(1.3,1)
+        }
+    }
+    .article-1 {
+        background: top / cover url(../assets/article_1.jpg) no-repeat;
+        height:700px
     }
 }
 
