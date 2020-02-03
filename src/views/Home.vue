@@ -25,7 +25,21 @@
         <img class="arrow" src="../assets/arrow.svg">
     </div>
     <div class="categories">
-        
+        <section>
+            <div>
+                <img class="logo-img white">
+                <div class="mag-logo" />
+<!--                 <svg style="filter: invert();" viewBox="0 0 100 100">
+                    <image :href="require('@/assets/war_logo.svg')"></image>
+                </svg> -->
+                <div class="magazine-cover">
+                    
+                </div>
+            </div>
+            <div>
+                
+            </div>
+        </section>
     </div>
   </div>
 </template>
@@ -142,6 +156,7 @@ body,html{
             width: 90%;
             height: 90%;
         }
+
         .arrow {
             position: absolute;
             bottom: 50px;
@@ -175,6 +190,31 @@ body,html{
     height: calc(100% + 60px);
     background: #000;
     margin: 30px -30px 0;
+
+    .logo-img.white {
+         content:url(../assets/war_logo.svg);
+         filter: invert(100%);
+         height: 120px;
+         display:inline-block;
+         float:left;
+         margin:30px
+
+    }
+    .logo-img.white + div {
+            background: 61% 52.1% / auto 280% url(../assets/mag_logo.svg) no-repeat;
+            height: 120px;
+            width:332px;
+            display:inline-block;
+            float:left;
+            margin:30px -50px
+    }
+    .magazine-cover {
+        clear: both;
+        margin: 0 10px;
+        height: 600px;
+        background: top / cover url(../assets/germany.jpg) no-repeat;
+
+    }
 }
 
 
