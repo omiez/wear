@@ -3,7 +3,7 @@
 		<div class="title">Escape</div>
 		<img class="logo-img">
 		<video class="video" autoplay muted playsinline>
-		<source src="../assets/escape/escape.mp4"  type="video/mp4">
+		<source src="../assets/escape/escape.webm"  type="video/mp4">
 		</video>
 			
 
