@@ -1,7 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import Magazine from '../views/Attack.vue'
+import Attack from '../views/Attack.vue'
+import Improvise from '../views/Improvise.vue'
+import Protect from '../views/Protect.vue'
+import Escape from '../views/Escape.vue'
+import Article from '../views/article.vue'
 
 Vue.use(VueRouter)
 
@@ -12,10 +16,34 @@ const routes = [
     component: Home
   },
   {
-    path: '/magazine',
-    name: 'magazine',
+    path: '/attack',
+    name: 'attack',
     component
-    : Magazine
+    : Attack
+  },
+  {
+    path: '/improvise',
+    name: 'improvise',
+    component
+    : Improvise
+  },
+  {
+    path: '/protect',
+    name: 'protect',
+    component
+    : Protect
+  },
+  {
+    path: '/escape',
+    name: 'escape',
+    component
+    : Escape
+  },
+  {
+    path: '/article',
+    name: 'article',
+    component
+    : Article
   }
   // ,
   // {

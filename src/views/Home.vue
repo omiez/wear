@@ -4,19 +4,27 @@
     <hr class="vertical" />
     <table >
         <tr>
+            
             <td class="attack-box">
                 Attack
+                <router-link to="attack"/>
             </td>
+            
+            
             <td class="protect-box">
                 Protect
+                <router-link to="protect"/>
             </td>
+            
         </tr>
         <tr>
             <td class="escape-box">
                 Escape
+                <router-link to="escape"/>
             </td>
             <td class="improvise-box">
                 Improvise
+                <router-link to="improvise"/>
             </td>
         </tr>
     </table>
@@ -32,7 +40,7 @@
 <!--                 <svg style="filter: invert();" viewBox="0 0 100 100">
                     <image :href="require('@/assets/war_logo.svg')"></image>
                 </svg> -->
-                <router-link to="magazine">
+                <router-link to="article">
                 <div class="magazine-cover">
                     <div class="subtitle">
                         Made in
@@ -53,24 +61,24 @@
                                  Improvise
                             </div>
                         </div>
-                        <div class="magazine-article">
+                        <div class="magazine-article article-2">
                             <div class="catagory-name">
                                  Improvise
                             </div>
                         </div>
                     </div>
                     <div class="magazine-column">
-                        <div class="magazine-article">
+                        <div class="magazine-article article-3">
                             <div class="catagory-name">
                                  Improvise
                             </div>
                         </div>
-                        <div class="magazine-article">
+                        <div class="magazine-article article-4">
                             <div class="catagory-name">
                                  Attack
                             </div>
                         </div>
-                         <div class="magazine-article">
+                         <div class="magazine-article article-5">
                             <div class="catagory-name">
                                  Protect
                             </div>
@@ -132,6 +140,9 @@ body,html{
     background: #000;
 
 }
+a { 
+    color: #000;
+}
 .logo-img {
     vertical-align: middle;
     width: 90%;
@@ -150,7 +161,8 @@ body,html{
         height: 100%;
         border: 1px solid #000;
         border-collapse: collapse;
-        font-family: 'Helvetica';
+        font-weight:lighter;
+        font-family: 'champion';
         font-size:30px;
         text-transform: uppercase;
 
@@ -161,9 +173,19 @@ body,html{
             width: 50%;
             padding: 20px;
             color: #000;
+            position:relative;
+
             &:hover {
                 -webkit-text-stroke: 1px #000;
                 color: transparent;
+            }
+            & > a {
+                    display: inline-block;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
             }
 
             &.attack-box {
@@ -173,13 +195,14 @@ body,html{
                 &:hover {
                    background-position: 98% 93% ;
                 }
+
             }
             &.protect-box {
                 text-align:right;
                 vertical-align: top;
-                background: -9999px -9999px / cover no-repeat url(../assets/protect/3.jpg);
+                background: -9999px -9999px / cover no-repeat url(../assets/protect/9.jpg);
                 &:hover {
-                    background-position: 10%  20%;
+                    background-position: 0  40%;
                 }
             }
             &.escape-box {
@@ -273,6 +296,11 @@ body,html{
         height: 90vh;
         position: relative;
         background: top / cover url(../assets/germany.jpg) no-repeat;
+        transition: all .2s ease-in-out;
+                &:hover {transform-origin: center center;
+                    transform:scale(1.01,1.01);
+                    ;
+                }
         overflow: hidden;
         & > div.subtitle {
             position: absolute;
@@ -320,6 +348,11 @@ body,html{
 
     }
     .magazine-article {
+        transition: all .2s ease-in-out;
+                &:hover {transform-origin: center center;
+                    transform:scale(1.01,1.01);
+                    ;
+                }
         height: 400px;
         margin: 20px 10px;
         background: top / cover url(../assets/germany.jpg) no-repeat;
@@ -339,8 +372,24 @@ body,html{
         }
     }
     .article-1 {
-        background: top / cover url(../assets/article_1.jpg) no-repeat;
+        background: top / 100% url(../assets/magazine/wEar3.png) no-repeat;
+        height:1000px;
+    }
+    .article-2 {
+        background: top / 100% url(../assets/magazine/wEar.png) no-repeat;
+        height:600px
+    }
+    .article-3 {
+        background: top / 100% url(../assets/magazine/wEar1.png) no-repeat;
+        height:500px
+    }
+    .article-4 {
+        background: top / 100% url(../assets/magazine/wEar2.png) no-repeat;
         height:700px
+    }
+    .article-5 {
+        background: top / 100% url(../assets/magazine/wEar4.png) no-repeat;
+        height:480px
     }
 }
 
