@@ -3,7 +3,7 @@
 		<div class="title">Improvise</div>
 		<img class="logo-img">
 		<video class="video" autoplay muted playsinline>
-		<source src="../assets/improvise/improvise.webm"  type="video/mp4">
+		<source src="../assets/improvise/improvise_compressed.mp4"  type="video/mp4">
 		</video>
 			
 

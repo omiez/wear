@@ -3,7 +3,7 @@
 		<div class="title">Attack</div>
 		<img class="logo-img">
 		<video class="video" autoplay muted playsinline>
-		<source src="../assets/attack/attack.webm"  type="video/mp4">
+		<source src="../assets/attack/attack_compressed.mp4"  type="video/mp4">
 		</video>
 			
 
