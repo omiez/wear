@@ -3,21 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "serve": "babel vue.config.mjs --out-file vue.config.js --presets=es2015 && vue-cli-service serve",
+    "build": "babel vue.config.mjs --out-file vue.config.js --presets=es2015 && vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "core-js": "^3.4.4",
+    "imagemin-webpack-plugin": "^2.4.2",
     "vue": "^2.6.10",
     "vue-router": "^3.1.3"
   },
   "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
     "@vue/cli-plugin-babel": "^4.1.0",
     "@vue/cli-plugin-eslint": "^4.1.0",
     "@vue/cli-plugin-router": "^4.1.0",
     "@vue/cli-service": "^4.1.0",
+    "babel-cli": "^6.26.0",
     "babel-eslint": "^10.0.3",
+    "babel-preset-es2015": "^6.24.1",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "sass": "^1.23.7",
