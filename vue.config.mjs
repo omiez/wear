@@ -6,7 +6,7 @@ module.exports = {
 				plugins: [
 					new ImageminPlugin({
   						// pngquant: ({quality: [0.5, 0.5]}),
-  						plugins: [imageminMozjpeg({quality: 95})]
+  						plugins: [imageminMozjpeg({quality: 75})]
 					})
           		]
 	}

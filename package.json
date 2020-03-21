@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "babel vue.config.mjs --out-file vue.config.js --presets=es2015 && vue-cli-service serve",
-    "build": "babel vue.config.mjs --out-file vue.config.js --presets=es2015 && vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "serve": "npm run babel && vue-cli-service serve",
+    "build": "npm run babel && vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "babel": "babel vue.config.mjs --out-file vue.config.js --presets=es2015"
   },
   "dependencies": {
     "core-js": "^3.4.4",
