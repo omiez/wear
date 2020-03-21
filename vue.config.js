@@ -13,7 +13,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 module.exports = {
 	configureWebpack: {
 		plugins: [new _imageminWebpackPlugin2.default({
-			// pngquant: ({quality: [0.5, 0.5]}),
+			pngquant: { quality: 75 },
 			plugins: [(0, _imageminMozjpeg2.default)({ quality: 75 })]
 		})]
 	}

@@ -5,7 +5,7 @@ module.exports = {
 	configureWebpack: {
 				plugins: [
 					new ImageminPlugin({
-  						// pngquant: ({quality: [0.5, 0.5]}),
+  						pngquant: ({quality: 75}),
   						plugins: [imageminMozjpeg({quality: 75})]
 					})
           		]
