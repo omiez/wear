@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "serve": "npm run babel && vue-cli-service serve",
+    "serve-static": "serve -s dist",
     "build": "npm run babel && vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "babel": "babel vue.config.mjs --out-file vue.config.js --presets=es2015"
+    "babel": "babel vue.config.mjs --out-file vue.config.js --presets=es2015",
+    "deploy": "npm run build && git rev-parse HEAD | xargs firebase deploy -m"
   },
   "dependencies": {
     "core-js": "^3.4.4",
@@ -28,8 +30,10 @@
     "babel-preset-es2015": "^6.24.1",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "firebase-tools": "^8.0.1",
     "sass": "^1.23.7",
     "sass-loader": "^8.0.0",
+    "serve": "^11.3.0",
     "vue-template-compiler": "^2.6.10"
   }
 }

@@ -7,7 +7,7 @@ Vue.config.productionTip = false
 
 Vue.use(VueGtag, {
   config: { id: process.env.VUE_APP_GA_MEASUREMENT_ID }
-});
+}, router);
 
 new Vue({
   router,
