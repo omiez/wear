@@ -1,4 +1,4 @@
-# wear
+![We(a)r](./src/assets/war_logo.svg?sanitize=true "Title")
 
 ## Project setup
 ```
