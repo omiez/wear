@@ -12,9 +12,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 module.exports = {
 	configureWebpack: {
-		plugins: [new _imageminWebpackPlugin2.default({
+		plugins: process.env.NODE_ENV === 'production' ? [new _imageminWebpackPlugin2.default({
 			pngquant: { quality: 75 },
 			plugins: [(0, _imageminMozjpeg2.default)({ quality: 75 })]
-		})]
+		})] : []
 	}
 };
