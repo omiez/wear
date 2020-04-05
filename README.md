@@ -1,4 +1,4 @@
-![We(a)r](./src/assets/war_logo.svg?sanitize=true "Title")
+![We(a)r](./src/assets/war_logo.svg?sanitize=true "We(a)r")
 
 ## Project setup
 ```
