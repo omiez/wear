@@ -32,6 +32,8 @@ npm run lint
 ```
 npm run deploy
 ```
+This work is licensed under 
 
-All Rights reserved to Omer Azriel and Ronel Rokach
-2020 ©
+![](https://creativecommons.org/images/public/somerights.gif)
+
+Created by Omer Azriel and Ronelle Rokach 2020 <img src="https://mirrors.creativecommons.org/presskit/icons/cc.large.png" width="13" height="13">
