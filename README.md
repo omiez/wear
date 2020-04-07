@@ -1,4 +1,4 @@
-![We(a)r](./src/assets/war_logo.svg?sanitize=true "We(a)r")
+<a href="http://wear-fashion.web.app">![We(a)r](./src/assets/war_logo.svg?sanitize=true "We(a)r")</a>
 
   
 Live website: http://wear-fashion.web.app
